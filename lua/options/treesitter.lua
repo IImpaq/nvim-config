@@ -4,7 +4,10 @@ require("nvim-treesitter.configs").setup {
     "c", 
     "cpp", 
     "lua", 
-    "python" 
+    "python", 
+    "rust",
+    "javascript",
+    "typescript"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
