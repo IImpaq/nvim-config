@@ -13,4 +13,5 @@ require("options.fidget")
 require("options.luasnip")
 require("options.mason")
 require("options.cmp")
+require("options.surround")
 
