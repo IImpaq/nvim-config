@@ -6,6 +6,7 @@ require("options.keymap")
 -- Plguin options
 require("options.lualine")
 require("options.telescope")
+require("options.nvimtree")
 require("options.treesitter")
 require("options.neodev")
 require("options.lspconfig")
