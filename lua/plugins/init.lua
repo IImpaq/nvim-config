@@ -32,6 +32,8 @@ return {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   },
+  "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-web-devicons",
 --[[
 *****************************************************************
 *                    CODE COMPLETION PLUGINS                    *
@@ -57,6 +59,7 @@ return {
       "j-hui/fidget.nvim",
       tag = "legacy"
   },
+  "onsails/lspkind.nvim",
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
