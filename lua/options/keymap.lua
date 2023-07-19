@@ -14,9 +14,13 @@ vim.keymap.set('i', 'jj', '<Esc>', {noremap = true})
 *****************************************************************
 ]]
 local telescope = require('telescope.builtin')
+-- "leader" + "ff" -> find in files
 vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
+-- "leader" + "fg" -> find using live grep
 vim.keymap.set('n', '<leader>fg', telescope.live_grep, {})
+-- "leader" + "fb" -> find in open buffers 
 vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
+-- "leader" + "ff" -> find help tags 
 vim.keymap.set('n', '<leader>fh', telescope.help_tags, {})
 
 --[[
