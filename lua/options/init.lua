@@ -4,6 +4,7 @@ require("options.theme")
 require("options.keymap")
 
 -- Plguin options
+require("options.gitsigns")
 require("options.lualine")
 require("options.telescope")
 require("options.nvimtree")
@@ -15,4 +16,6 @@ require("options.luasnip")
 require("options.mason")
 require("options.cmp")
 require("options.surround")
+require("options.comment")
+require("options.hop")
 

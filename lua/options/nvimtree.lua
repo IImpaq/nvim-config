@@ -18,15 +18,14 @@ local function settings_on_attach(bufnr)
   -- custom mappings
   vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent,        opts('Up'))
   vim.keymap.set('n', '?',     api.tree.toggle_help,                  opts('Help'))
+  vim.keymap.set('n', '<C-b>', "<cmd>NvimTreeToggle<CR>", {noremap = true})
+  vim.keymap.set('n', '<C-n>', "<cmd>NvimTreeFocus<CR>", {noremap = true})
 end
 
 -- OR setup with some options
 require("nvim-tree").setup({
   on_attach = settings_on_attach,
   sort_by = "case_sensitive",
-  view = {
-    width = 30,
-  },
   renderer = {
     group_empty = true,
   },
@@ -34,3 +33,4 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+

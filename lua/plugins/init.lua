@@ -10,6 +10,7 @@ return {
   "tpope/vim-fugitive",
   -- GitHub extension to fugitive
   "tpope/vim-rhubarb",
+  "lewis6991/gitsigns.nvim",
 
 --[[
 *****************************************************************
@@ -46,9 +47,9 @@ return {
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
-    dependencies = {},
     build = ':TSUpdate',
   },
+  "nvim-treesitter/nvim-treesitter-textobjects",
   {
     "williamboman/mason.nvim",
     build = ":MasonUpdate"
@@ -89,4 +90,6 @@ return {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
   },
+  "numToStr/Comment.nvim",
+  "phaazon/hop.nvim",
 }

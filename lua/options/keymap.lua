@@ -8,6 +8,11 @@ vim.keymap.set('n', 'ß', '$', {noremap = true})
 -- "jj" -> to exit insert mode
 vim.keymap.set('i', 'jj', '<Esc>', {noremap = true})
 
+vim.keymap.set('n', '<C-h>', '<C-w>h', {noremap = true})
+vim.keymap.set('n', '<C-j>', '<C-w>j', {noremap = true})
+vim.keymap.set('n', '<C-k>', '<C-w>k', {noremap = true})
+vim.keymap.set('n', '<C-l>', '<C-w>l', {noremap = true})
+
 --[[
 *****************************************************************
 *                          TELESCOPE                            *
@@ -29,10 +34,29 @@ vim.keymap.set('n', '<leader>fh', telescope.help_tags, {})
 *****************************************************************
 ]]
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 -- "K" -> Show documentation when hovering over method
 vim.keymap.set("n", "K", vim.lsp.buf.hover)
 
+--[[
+*****************************************************************
+*                              HOP                              *
+*****************************************************************
+]]
+local hop = require('hop')
+local directions = require('hop.hint').HintDirection
+vim.keymap.set("", 'f', function()
+  hop.hint_patterns({ direction = directions.AFTER_CURSOR })
+end, {remap=true})
+vim.keymap.set("", 'F', function()
+  hop.hint_patterns({ direction = directions.BEFORE_CURSOR })
+end, {remap=true})
+vim.keymap.set("", "t", function()
+  hop.hint_char1({ direction = directions.AFTER_CURSOR })
+end, {remap=true})
+vim.keymap.set("", "T", function()
+  hop.hint_char1({ direction = directions.BEFORE_CURSOR })
+end, {remap=true})
