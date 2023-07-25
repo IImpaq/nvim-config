@@ -15,7 +15,7 @@ This repository contains all configuration files to have a minimalistic Neovim i
 
 ### Installation
 
-* Clone this repository to ~/.config/local/nvim/
+* Clone this repository to ~/.config/nvim/ (for macOS, if you use any other OS this may be different)
 * Check / Verify / Adapt any of the config files contained in the repository
 * Open Neovim and wait for all packages to install
 * Increase your productivity and have fun :)
