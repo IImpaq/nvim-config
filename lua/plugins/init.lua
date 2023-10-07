@@ -1,7 +1,7 @@
 return {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",       name = "catppuccin", priority = 1000 },
 
---[[
+  --[[
 *****************************************************************
 *                         GIT PLUGINS                           *
 *****************************************************************
@@ -12,7 +12,7 @@ return {
   "tpope/vim-rhubarb",
   "lewis6991/gitsigns.nvim",
 
---[[
+  --[[
 *****************************************************************
 *                       VISUAL PLUGINS                          *
 *****************************************************************
@@ -24,23 +24,26 @@ return {
     init = function() vim.g.barbar_auto_setup = false end,
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
+  { "ellisonleao/glow.nvim", config = true,       cmd = "Glow" },
 
---[[
+  --[[
 *****************************************************************
 *                  FILE MANAGEMENT PLUGINS                      *
 *****************************************************************
 ]]
   {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    'nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   {
     'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+    build =
+    'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   },
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
---[[
+  --[[
 *****************************************************************
 *                    CODE COMPLETION PLUGINS                    *
 *****************************************************************
@@ -62,8 +65,8 @@ return {
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
   {
-      "j-hui/fidget.nvim",
-      tag = "legacy"
+    "j-hui/fidget.nvim",
+    tag = "legacy"
   },
   "onsails/lspkind.nvim",
   'hrsh7th/cmp-nvim-lsp',
@@ -79,7 +82,7 @@ return {
     }
   },
 
---[[
+  --[[
 *****************************************************************
 *                         MISC PLUGINS                          *
 *****************************************************************
@@ -97,4 +100,7 @@ return {
   },
   "numToStr/Comment.nvim",
   "phaazon/hop.nvim",
+  -- Terminal within neovim
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
 }
+

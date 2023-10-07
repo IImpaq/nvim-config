@@ -6,6 +6,7 @@ require("options.keymap")
 -- Plguin options
 require("options.gitsigns")
 require("options.lualine")
+require("options.glow")
 require("options.telescope")
 require("options.nvimtree")
 require("options.treesitter")
