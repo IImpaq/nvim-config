@@ -22,4 +22,5 @@ require("options.hop")
 require("options.barbar")
 require("options.toggleterm")
 require("options.todocomments")
+require("options.guessindent")
 

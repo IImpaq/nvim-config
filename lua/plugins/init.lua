@@ -81,6 +81,7 @@ return {
       "saadparwaiz1/cmp_luasnip",
     }
   },
+  "NMAC427/guess-indent.nvim",
 
   --[[
 *****************************************************************
