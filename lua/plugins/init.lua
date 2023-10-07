@@ -98,9 +98,26 @@ return {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
   },
-  "numToStr/Comment.nvim",
+  {
+    "numToStr/Comment.nvim",
+    opts = {},
+    lazy = false,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  },
   "phaazon/hop.nvim",
   -- Terminal within neovim
-  { 'akinsho/toggleterm.nvim', version = "*", config = true },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = true
+  }
 }
 

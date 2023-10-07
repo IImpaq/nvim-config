@@ -20,4 +20,6 @@ require("options.surround")
 require("options.comment")
 require("options.hop")
 require("options.barbar")
+require("options.toggleterm")
+require("options.todocomments")
 
