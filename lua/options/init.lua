@@ -23,4 +23,11 @@ require("options.barbar")
 require("options.toggleterm")
 require("options.todocomments")
 require("options.guessindent")
+require("options.trouble")
+require("options.cmaketools")
+require("options.miniindentscope")
+require("options.miniautopair")
+require("options.notify")
+require("options.dressing")
+
 

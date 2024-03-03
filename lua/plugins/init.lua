@@ -18,13 +18,16 @@ return {
 *****************************************************************
 ]]
   -- Status line at the bottom of the screen
-  'nvim-lualine/lualine.nvim',
+  "nvim-lualine/lualine.nvim",
   {
-    'romgrk/barbar.nvim',
+    "romgrk/barbar.nvim",
     init = function() vim.g.barbar_auto_setup = false end,
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
   { "ellisonleao/glow.nvim", config = true,       cmd = "Glow" },
+  { "echasnovski/mini.indentscope", version = false },
+  "rcarriga/nvim-notify",
+  "stevearc/dressing.nvim",
 
   --[[
 *****************************************************************
@@ -75,13 +78,23 @@ return {
   'hrsh7th/cmp-cmdline',
   'hrsh7th/nvim-cmp',
   {
-    'L3MON4D3/LuaSnip',
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     dependencies = {
       "rafamadriz/friendly-snippets",
       "saadparwaiz1/cmp_luasnip",
     }
   },
   "NMAC427/guess-indent.nvim",
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {}
+  },
+  "github/copilot.vim",
+  "Civitasv/cmake-tools.nvim",
+  { "echasnovski/mini.pairs", version = false },
 
   --[[
 *****************************************************************
@@ -119,6 +132,7 @@ return {
     "akinsho/toggleterm.nvim",
     version = "*",
     config = true
-  }
+  },
+  "christoomey/vim-tmux-navigator",
 }
 

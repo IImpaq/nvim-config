@@ -1,14 +1,18 @@
 local servers = {
   clangd = {},
   -- gopls = {},
-  -- pyright = {},
+  pyright = {
+    python = {
+      pythonPath = "/opt/homebrew/bin/python3"
+    },
+  },
   -- rust_analyzer = {},
+  texlab = {},
   tsserver = {},
   svelte = {},
-
   lua_ls = {
     Lua = {
-      workspace = { checkThirdParty = false },
+      workspace = { checkThirdParty = "Disable" },
       telemetry = { enable = false },
     },
   },
@@ -137,3 +141,4 @@ mason_lspconfig.setup_handlers {
     }
   end,
 }
+
