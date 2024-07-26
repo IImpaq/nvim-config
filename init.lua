@@ -6,4 +6,5 @@ require("config.vim")
 -- Plugins
 require("config.catppuccin")
 require("config.gitsigns")
+require("config.lualine")
 
