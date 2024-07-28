@@ -3,7 +3,8 @@ local o = vim.o
 local wo = vim.wo
 
 -- Set highlight on search
-o.hlsearch = false
+o.hlsearch = true
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Make line numbers default
 wo.number = true
@@ -52,3 +53,15 @@ o.completeopt = "menuone,noselect"
 
 -- NOTE: You should make sure your terminal supports this
 o.termguicolors = true
+
+-- Enable nerd font if enabled in terminal
+vim.g.have_nerd_font = true
+
+-- Configure how new splits should be opened
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+-- Show which line your cursor is on
+vim.opt.cursorline = true
+
+vim.opt.showmode = false

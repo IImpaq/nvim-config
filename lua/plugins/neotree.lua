@@ -288,6 +288,7 @@ return {
 		})
 
 		-- vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
-		vim.keymap.set("n", "<leader>tt", "<Cmd>Neotree toggle<CR>", { desc = "[T]oggle Neo[T]ree window" })
+		vim.keymap.set("n", "<leader>et", "<Cmd>Neotree toggle<CR>", { desc = "[e]xplorer [t]oggle" })
+		vim.keymap.set("n", "<leader>ef", "<Cmd>Neotree focus<CR>", { desc = "[e]xplorer [f]ocus" })
 	end,
 }
