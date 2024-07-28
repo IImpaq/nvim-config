@@ -1,7 +1,6 @@
 -- VIM SETTINGS
 local o = vim.o
 local wo = vim.wo
-local cmd = vim.cmd
 
 -- Set highlight on search
 o.hlsearch = false
@@ -13,12 +12,12 @@ wo.number = true
 wo.relativenumber = true
 
 -- Enable mouse mode
-o.mouse = 'a'
+o.mouse = "a"
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-o.clipboard = 'unnamedplus'
+o.clipboard = "unnamedplus"
 
 -- Enable break indent
 o.breakindent = true
@@ -41,7 +40,7 @@ o.tabstop = 2
 o.shiftwidth = 2
 
 -- Keep signcolumn on by default
-wo.signcolumn = 'yes'
+wo.signcolumn = "yes"
 
 -- Decrease update time
 o.updatetime = 250
@@ -49,11 +48,7 @@ o.timeout = true
 o.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-o.completeopt = 'menuone,noselect'
+o.completeopt = "menuone,noselect"
 
 -- NOTE: You should make sure your terminal supports this
 o.termguicolors = true
-
--- Set colorscheme
-cmd.colorscheme "catppuccin"
-
