@@ -2,6 +2,16 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
+	keys = {
+		{
+			"<leader>cf",
+			function()
+				require("conform").format({ async = true, lsp_fallback = true })
+			end,
+			mode = "",
+			desc = "[c]ode [f]ormat",
+		},
+	},
 	config = function()
 		require("conform").setup({
 			notify_on_error = false,
@@ -23,16 +33,6 @@ return {
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
 				-- javascript = { { "prettierd", "prettier" } },
-			},
-			keys = {
-				{
-					"<leader>f",
-					function()
-						require("conform").format({ async = true, lsp_fallback = true })
-					end,
-					mode = "",
-					desc = "[F]ormat buffer",
-				},
 			},
 		})
 	end,

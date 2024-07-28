@@ -67,12 +67,12 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "]t", function()
+		vim.keymap.set("n", "gnt", function()
 			require("todo-comments").jump_next()
-		end, { desc = "Next todo comment" })
+		end, { desc = "[g]o to [n]ext [t]odo" })
 
-		vim.keymap.set("n", "[t", function()
+		vim.keymap.set("n", "gpt", function()
 			require("todo-comments").jump_prev()
-		end, { desc = "Previous todo comment" })
+		end, { desc = "[g]o to [p]revious [t]odo" })
 	end,
 }
